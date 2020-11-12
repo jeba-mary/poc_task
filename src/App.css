@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit {
+  border-radius: 4px;
   color: white;
+  background-color: #15c39a;
+}
+.dash {
+  margin-top: 20px;
+}
+.main {
+  margin-top: 10px;
+}
+.heading {
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.user-name {
+  color: black;
+}
+.profile {
+  width: 100px;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.personel-info {
+  margin-top: 20px;
 }
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.btn {
+  border-radius: 4px;
+  color: white;
+  background-color: #15c39a;
+}
+
+.appbar {
+  background-color: black;
+}
+
+.myContainer, 
+    .myContainer > div.react-datepicker-wrapper, 
+    .myContainer > div > div.react-datepicker__input-container
+    .myContainer > div > div.react-datepicker__input-container input {
+       width: 100%;
+       height: 100%;
+    }
+    .react-datepicker__input-container  {
+        width: inherit;
+        height: inherit;
+      }
+      .react-datepicker__input-container input {
+        width: inherit;
+        height: 40px;
+        display: block;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+      }
