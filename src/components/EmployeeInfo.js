@@ -2,6 +2,9 @@ import React from 'react';
 import { Tabs, Tab, AppBar } from '@material-ui/core'
 import Personal from './employee/Personal';
 import Contact from './employee/Contact';
+import Family  from './employee/Family';
+import Education from './employee/Education';
+import Experience from './employee/Experience';
 
 const EmployeeInfo = (props) => {
 	const { match, history } = props;
@@ -10,7 +13,10 @@ const EmployeeInfo = (props) => {
 
   const tabNameToIndex = {
     0: "personal",
-    1: "contact"
+		1: "contact",
+		2: "family",
+		3: "qualification",
+		4: "experience"
   };
 
   const indexToTabName = {
@@ -41,6 +47,10 @@ const EmployeeInfo = (props) => {
 		</AppBar>
 		{selectedTab === 0 && <Personal/>}
 		{selectedTab === 1 && <Contact />}
+		{selectedTab === 2 && <Family />}
+		{selectedTab === 3 && <Education />}
+		{selectedTab === 4 && <Experience />}
+
 		</>
 	)
 }

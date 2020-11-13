@@ -31,8 +31,8 @@ class Personal extends React.Component {
 	}
 	
 	handleSubmit = () => {
-		const { firstName, middleName, lastName, startDate, nationality, ethenicity, spouseName } = this.state;
-    alert(`Employees: ${firstName} password: ${middleName} lastname: ${lastName} startDate: ${startDate}, nationality: ${nationality} ethinicity: ${ethenicity}, spouse: ${spouseName}`);
+		const { firstName, middleName, lastName, startDate, gender, nationality, ethenicity, status,spouseName } = this.state;
+    console.log(`Employees: ${firstName} middleName: ${middleName} lastname: ${lastName} startDate: ${startDate} gender: ${gender} nationality: ${nationality} ethinicity: ${ethenicity} status: ${status} spouse: ${spouseName}`);
 	}
 
   render() {
@@ -61,12 +61,12 @@ class Personal extends React.Component {
 								<div className="form-group">
 									<div class="form-check-inline">
 										<label class="form-check-label">
-											<input type="radio" class="form-check-input" name="optradio" value="female" checked={this.state.gender === "female"} onChange={this.handleChange}/>Male
+											<input type="radio" class="form-check-input" name="gender" value="male" checked={this.state.gender === "male"} onChange={this.handleChange}/>Male
 										</label>
 									</div>
 									<div class="form-check-inline">
 										<label class="form-check-label">
-											<input type="radio" class="form-check-input" name="optradio" value="male" checked={this.state.gender === "male"} onChange={this.handleChange}/>Female
+											<input type="radio" class="form-check-input" name="gender" value="female" checked={this.state.gender === "female"} onChange={this.handleChange}/>Female
 										</label>
 									</div>
 								</div>
@@ -82,7 +82,7 @@ class Personal extends React.Component {
 
 							<div class="form-group">
 								<label for="status">Marital Status</label>
-								<select class="form-control" id="status" value={this.state.status} onChange={this.handleChange}>
+								<select class="form-control" id="status" name="status" value={this.state.status} onChange={this.handleChange}>
 									<option value="single">Single</option>
 									<option value="married">Married</option>
 									<option value="widow">Widow</option>
